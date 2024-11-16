@@ -12,9 +12,9 @@ app.use(auth)
 
 app.use('/', router);
 
-// app.get('/', (req, res) => {
-//     res.send({ status: 'API is running!' });
-// });
+app.get('/', (req, res) => {
+    res.send({ status: 'APP is running!' });
+});
 
 app.use(function (req, res) {
     res.status(404).json({

@@ -6,7 +6,7 @@ module.exports = async (req, res, next) => {
     const authHeader = req.headers['authorization'];
     const token = authHeader && authHeader.split(' ')[1]
 
-    if (['/login', '/import'].includes(req.path) || req.path.includes('/user')) {
+    if (['/', '/login', '/import'].includes(req.path) || req.path.includes('/user')) {
         return next()
     }
 
