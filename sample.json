@@ -1,0 +1,292 @@
+[
+    {
+        "fname": "Alice",
+        "sname": "Smith",
+        "profile_picture": "https://picsum.photos/200",
+        "bio": "Avid reader and film enthusiast.",
+        "collections": [
+            {
+                "name": "My Movies",
+                "description": "Description for Alice's collection",
+                "recommendations": [
+                    {
+                        "title": "The Social Dilemma",
+                        "caption": "A thought-provoking documentary.",
+                        "category": "movie"
+                    },
+                    {
+                        "title": "Breaking Bad",
+                        "caption": "Gripping and intense.",
+                        "category": "movie"
+                    },
+                    {
+                        "title": "Spiderman",
+                        "caption": "Ideas worth spreading.",
+                        "category": "movie"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "fname": "Bob",
+        "sname": "Johnson",
+        "profile_picture": "https://picsum.photos/200",
+        "bio": "Music lover and foodie.",
+        "collections": [
+            {
+                "name": "My Music",
+                "description": "Description for Bob's collection",
+                "recommendations": [
+                    {
+                        "title": "Thinking, Fast and Slow",
+                        "caption": "A dive into human psychology.",
+                        "category": "read"
+                    },
+                    {
+                        "title": "Joe Rogan Experience",
+                        "caption": "Diverse and engaging.",
+                        "category": "podcast"
+                    },
+                    {
+                        "title": "Mount Everest",
+                        "caption": "A challenging ascent.",
+                        "category": "go"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "fname": "Charlie",
+        "sname": "Brown",
+        "profile_picture": "https://picsum.photos/200",
+        "bio": "Travel junkie and coffee lover.",
+        "collections": [
+            {
+                "name": "My Recommendations",
+                "description": "Description for Charlie's collection",
+                "recommendations": [
+                    {
+                        "title": "Inception",
+                        "caption": "A cinematic masterpiece.",
+                        "category": "movie"
+                    },
+                    {
+                        "title": "The Louvre, Paris",
+                        "caption": "An art haven.",
+                        "category": "go"
+                    },
+                    {
+                        "title": "Rolling Stones",
+                        "caption": "Rock n Roll legends.",
+                        "category": "artist"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "fname": "David",
+        "sname": "Jones",
+        "profile_picture": "https://picsum.photos/200",
+        "bio": "Tech geek and podcast fanatic.",
+        "collections": [
+            {
+                "name": "My Recommendations",
+                "description": "Description for David's collection",
+                "recommendations": [
+                    {
+                        "title": "Shape of You by Ed Sheeran",
+                        "caption": "Timeless tune.",
+                        "category": "song"
+                    },
+                    {
+                        "title": "Reputation by Taylor Swift",
+                        "caption": "Dark and catchy.",
+                        "category": "album"
+                    },
+                    {
+                        "title": "End Game by Taylor Swift",
+                        "caption": "Pop perfection.",
+                        "category": "song"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "fname": "Ella",
+        "sname": "Davis",
+        "profile_picture": "https://picsum.photos/200",
+        "bio": "Outdoor adventurer and photographer.",
+        "collections": [
+            {
+                "name": "My Recommendations",
+                "description": "Description for Ella's collection",
+                "recommendations": [
+                    {
+                        "title": "Latte at Coffee House",
+                        "caption": "Perfect morning brew.",
+                        "category": "drink"
+                    },
+                    {
+                        "title": "Science Vs",
+                        "caption": "Debunking popular myths.",
+                        "category": "podcast"
+                    },
+                    {
+                        "title": "Tacos at El Amigo",
+                        "caption": "Taste of Mexico.",
+                        "category": "eat"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "fname": "Fiona",
+        "sname": "Miller",
+        "profile_picture": "https://picsum.photos/200",
+        "bio": "Yoga instructor and health guru.",
+        "collections": [
+            {
+                "name": "My Recommendations",
+                "description": "Description for Fiona's collection",
+                "recommendations": [
+                    {
+                        "title": "Central Park, NYC",
+                        "caption": "Nature amidst urban sprawl.",
+                        "category": "go"
+                    },
+                    {
+                        "title": "The Crown",
+                        "caption": "Historical and dramatic.",
+                        "category": "tvshow"
+                    },
+                    {
+                        "title": "Brief History of Time",
+                        "caption": "Dive into the universe.",
+                        "category": "read"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "fname": "George",
+        "sname": "Garcia",
+        "profile_picture": "https://picsum.photos/200",
+        "bio": "Culinary expert and chef.",
+        "collections": [
+            {
+                "name": "My Recommendations",
+                "description": "Description for George's collection",
+                "recommendations": [
+                    {
+                        "title": "Blinding Lights by The Weeknd",
+                        "caption": "Electrifying.",
+                        "category": "song"
+                    },
+                    {
+                        "title": "25 by Adele",
+                        "caption": "Soulful journey.",
+                        "category": "album"
+                    },
+                    {
+                        "title": "Grand Canyon",
+                        "caption": "Nature’s wonder.",
+                        "category": "go"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "fname": "Hannah",
+        "sname": "Rodriguez",
+        "profile_picture": "https://picsum.photos/200",
+        "bio": "Artistic soul and painter.",
+        "collections": [
+            {
+                "name": "My Recommendations",
+                "description": "Description for Hannah's collection",
+                "recommendations": [
+                    {
+                        "title": "Mojito at The Bar",
+                        "caption": "Refreshing.",
+                        "category": "drink"
+                    },
+                    {
+                        "title": "Dune by Frank Herbert",
+                        "caption": "Sci-fi at its best.",
+                        "category": "read"
+                    },
+                    {
+                        "title": "A Star is Born",
+                        "caption": "Musical masterpiece.",
+                        "category": "movie"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "fname": "Ivan",
+        "sname": "Martinez",
+        "profile_picture": "https://picsum.photos/200",
+        "bio": "Sports enthusiast and coach.",
+        "collections": [
+            {
+                "name": "My Recommendations",
+                "description": "Description for Ivan's collection",
+                "recommendations": [
+                    {
+                        "title": "Game of Thrones",
+                        "caption": "Epic and thrilling.",
+                        "category": "tvshow"
+                    },
+                    {
+                        "title": "The Beatles",
+                        "caption": "Legends of music.",
+                        "category": "artist"
+                    },
+                    {
+                        "title": "Black Coffee",
+                        "caption": "Kickstart your day.",
+                        "category": "drink"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "fname": "Jane",
+        "sname": "Hernandez",
+        "profile_picture": "https://picsum.photos/200",
+        "bio": "Writer and poet.",
+        "collections": [
+            {
+                "name": "My Recommendations",
+                "description": "Description for Jane's collection",
+                "recommendations": [
+                    {
+                        "title": "Pizza at Mario’s",
+                        "caption": "Cheesy goodness.",
+                        "category": "eat"
+                    },
+                    {
+                        "title": "Chateau Wine",
+                        "caption": "Rich and smooth.",
+                        "category": "drink"
+                    },
+                    {
+                        "title": "Arctic Monkeys",
+                        "caption": "Modern rock at its best.",
+                        "category": "artist"
+                    }
+                ]
+            }
+        ]
+    }
+]
