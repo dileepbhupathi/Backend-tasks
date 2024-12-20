@@ -1,89 +1,39 @@
+require("dotenv").config();
 const express = require("express");
 const app = express();
-const userSchema = require("./modal/user");
+const cors = require("cors");
+const PORT = process.env.PORT;
+// const userSchema = require("./modal/user");
 const mongoose = require("mongoose");
-
+const router = require("./router");
+app.use(cors());
 app.use(express.json());
 
 mongoose
-  .connect(
-    "mongodb+srv://dileepbhupathi97:Dileep97@cluster0.znmqgls.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0",
-  )
+  .connect(process.env.DB_URI)
   .then(() => console.log("Database running!!!"))
   .catch((err) => console.log(err, "Something went wrong"));
 
+app.use("/", router);
 app.get("/", (req, res) => {
   res.send("Hello Dileep");
 });
-
-app.post("/register", async (req, res) => {
-  try {
-    const { username, email, password, confirmPassword } = req.body;
-    const emailExist = await userSchema.findOne({ email: email });
-    if (emailExist) {
-      return res.status(400).send("Email Already Exists");
-    }
-    if (password !== confirmPassword) {
-      return res.status(400).send("Incorrect Password");
-    }
-    let user = new userSchema({
-      username,
-      email,
-      password,
-      confirmPassword,
-    });
-    await user.save();
-    res.status(200).send("User added successfully");
-  } catch (err) {
-    console.log(err);
-    res.status(500).send("Internal Server Error");
-  }
+app.use(function (req, res) {
+  res.status(404).json({
+    error: `URL ${req.url} with method ${req.method} is not exist`,
+  });
 });
-app.get("/users", async (req, res) => {
-  try {
-    const usersData = await userSchema.find();
-    res.status(200).send(usersData);
-  } catch (err) {
-    console.log(err);
-    res.status(500).send("Internal Server Error");
-  }
-});
-app.put("/editUser/:id", async (req, res) => {
-  try {
-    const { email, password, confirmPassword } = req.body;
-    const emailExist = await userSchema.findOne({ email });
-    if (!emailExist) {
-      return res.status(400).send("User does not exist");
-    }
-    if (password !== confirmPassword) {
-      return res.status(400).send("Password does not match");
-    }
-
-    emailExist.password = password;
-    emailExist.confirmPassword = confirmPassword;
-
-    const updateUser = await userSchema.findByIdAndUpdate(
-      req.params.id,
-      emailExist,
-    );
-    res.status(200).send(emailExist);
-  } catch (err) {
-    console.log(err);
-    res.status(500).send("Internal Server Error");
-  }
+app.use((err, req, res, next) => {
+  return res.status(500).json({
+    error: err.message || "something went wrong",
+  });
 });
 
-app.delete("/deleteUser/:id", async (req, res) => {
-  try {
-    await userSchema.findByIdAndDelete(req.params.id);
-    const users = await userSchema.find();
-    res.status(200).send(users);
-  } catch (err) {
-    console.log(err);
-    res.status(500).send("Internal Server Error");
-  }
+app.listen(PORT, () => {
+  console.log(`Server is running on http://localhost:${PORT}`);
 });
 
-app.listen(5000, () => {
-  console.log("Server Running!!!");
+process.on("uncaughtException", (error) => {
+  console.error("Uncaught exception:", error.message || error);
+  // process.exit(1);
 });
